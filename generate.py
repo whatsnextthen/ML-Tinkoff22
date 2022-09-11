@@ -19,7 +19,8 @@ def generate(first_word, length):
         word = next[0]
 
 #Вводим слово и длину которую хотим получить
-word = input()
-length = int(input())
+word = input('Введите слово с которого хотите начать предложение ')
+length1 = int(input('Введите количество слов в предложении '))
+print(word, end = ' ')
 word = word.lower()
-generate(word, length)
+generate(word, length1)
