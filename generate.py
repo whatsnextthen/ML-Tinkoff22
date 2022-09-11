@@ -1,6 +1,8 @@
 import re
 import numpy as np
 
+from train import prob
+
 def generate(first_word, length):
     word = first_word
     for i in range(length):
