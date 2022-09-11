@@ -40,7 +40,7 @@ def probability():
             P = has / tot
             prob[k].append((word, P))
 
-with open('Data.txt') as f:
+with open('Data.txt', encoding='utf-8', mode='r') as f:
     text = f.read()
 text = tokenize_text(text)
 training(text)
