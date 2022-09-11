@@ -19,7 +19,12 @@ def generate(first_word, length):
         word = next[0]
 
 #Вводим слово и длину которую хотим получить
-word = input('Введите слово с которого хотите начать предложение ')
+word = "#@"
+while word not in prob.keys():
+  word = input('Введите слово с которого хотите начать предложение ')
+  if (word not in prob.keys()):
+    print('Вашего слова нет в моей модели, к сожалению. Пожалуйста, введите другое слово ')
+
 length1 = int(input('Введите количество слов в предложении '))
 print(word, end = ' ')
 word = word.lower()
