@@ -4,7 +4,7 @@ d = {}
 cnt = {}
 prob = {}
 
-def tokensize_text(text):
+def tokenize_text(text):
     t = re.sub(r'[^\w\s]', '', text.lower())
     new_t = t.split(' ')
     return new_t
@@ -40,18 +40,9 @@ def probability():
             P = has / tot
             prob[k].append((word, P))
 
-with open('kaiftext.txt') as f:
+with open('Data.txt') as f:
     text = f.read()
-text = tokensize_text(text)
-training(text)
-
-with open('kaiftext.txt') as f:
-    text = f.read()
-text = tokensize_text(text)
-training(text)
-with open('kaiftext.txt') as f:
-    text = f.read()
-text = tokensize_text(text)
+text = tokenize_text(text)
 training(text)
 
 probability()
